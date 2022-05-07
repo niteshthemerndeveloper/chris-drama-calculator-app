@@ -1,0 +1,35 @@
+{
+  "name": "drama-calculator",
+  "version": "28.04.2022",
+  "description": "\"This is a Drama Calculator Project that allows user to enter their drama details and calculates the Drama cost based on the project logic\"",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "JewelSpace",
+    "Drama Calculator",
+    "Cost Calculator",
+    "Lead Generation",
+    "Json",
+    "Web",
+    "API",
+    "Nodejs",
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "Chris Donlon",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "googleapis": "^100.0.0",
+    "mongoose": "^6.2.10"
+  }
+}
