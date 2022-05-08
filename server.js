@@ -4,6 +4,15 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 
+const connectCloudMongoDB = require('./config/mongoCloudDb.js');
+
+// Connect To MongoDB -> To Save Customer in the MongoDB
+connectCloudMongoDB();
+
+// Initialize Express Middleware to parse received Data
+app.use(express.json({ extended: false }));
+app.use(cors());
+
 // Serve Static Files
 app.use(express.static('public'));
 

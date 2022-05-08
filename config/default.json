@@ -1,0 +1,3 @@
+{
+  "mongoDBURISecretKey": "YOUR_MONGODB_SECRET_KEY"
+}
