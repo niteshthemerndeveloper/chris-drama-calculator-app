@@ -18,10 +18,12 @@ app.use(express.static('public'));
 
 // Sending the Website Files
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/calculator.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 // Define Routes;
+// Create API Endpoint & Save Details in the MongoDB Database
+app.use('/api/drama/calculator', require('./routes/dramaServer.js'));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
@@ -29,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'calculator.html'))
+    res.sendFile(path.resolve(__dirname, 'index.html'))
   );
 }
 
